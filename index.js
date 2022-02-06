@@ -50,6 +50,11 @@ const questions = [
         name: "contrib"
     },
     {
+        type: "input",
+        message: "Describe how to test the software",
+        name: "tests"
+    },
+    {
         type: "list",
         message: "Select a license",
         name: "license",
@@ -68,13 +73,65 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.access("README.md", err => {
+        if(err){
+            fs.appendFile(fileName, data, err => {})
+        } else {
+            fs.unlink("README.md", err => {})
+            fs.appendFile(fileName, data, err => {})
+        }
+    })
+    
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        let output = JSON.stringify(answers);
-        console.log(output);
+        let output = `# ${answers.project}
+
+=================
+Table Of Contents
+=================
+[Description](#Description)
+[Installation](#Installation)
+[Usage](#Usage)
+[Contributing](#Contributing)
+[Credits](#Credits)
+[Tests](#Tests)
+[Questions](#Questions)
+[License](#License)
+~~~~~~~~~~~~~~~~~
+
+## Description
+Created by: [${answers.author}](https://github.com/${answers.gitname})
+
+${answers.desc}
+
+## Installation
+${answers.install}
+
+## Usage
+${answers.usage}
+
+## Contributing
+${answers.contrib}
+
+## Credits
+${answers.credits}
+
+## Tests
+${answers.tests}
+
+## Questions
+Any questions regarding this software can be directed to the following
+${answers.author}
+[${answers.email}](mailto:${answers.email})
+[Github](${answers.gitname})
+
+##License
+Licensed under ${answers.license} license`;
+        writeToFile("README.md", output);
     })
 }
 
