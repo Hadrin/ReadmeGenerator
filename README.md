@@ -1,5 +1,5 @@
 # Readme Generator
-[GPL License Shield](https://img.shields.io/badge/license-GPL-blue)
+![GPL License Shield](https://img.shields.io/badge/license-GPL-blue)
 
 Table Of Contents
 
@@ -11,6 +11,8 @@ Table Of Contents
 [Tests](#Tests)
 [Questions](#Questions)
 [License](#License)
+[Screenshots](#Screenshots)
+[Demonstration](#Demonstration)
 
 
 ## Description
@@ -39,5 +41,16 @@ David McGinley
 [davidmcginley1995@gmail.com](mailto:davidmcginley1995@gmail.com)
 [Github](Hadrin)
 
-##License
+## License
 Licensed under GPL license
+
+## Screenshots
+What the user input looks like:
+[Process](https://i.imgur.com/p7xsylf.png)
+
+What the software generates:
+[Output](https://i.imgur.com/dfkcxX1.png)
+
+## Demonstration
+A link to a video demonstration can be found below:
+[Youtube](https://youtu.be/G6Rg8__YfW4)
