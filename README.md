@@ -38,7 +38,9 @@ No tests have been implemented for this software. This may change at a later dat
 ## Questions
 Any questions regarding this software can be directed to the following
 David McGinley
+
 [davidmcginley1995@gmail.com](mailto:davidmcginley1995@gmail.com)
+
 [Github](Hadrin)
 
 ## License
@@ -46,11 +48,12 @@ Licensed under GPL license
 
 ## Screenshots
 What the user input looks like:
-[Process](https://i.imgur.com/p7xsylf.png)
+![Process](https://i.imgur.com/p7xsylf.png)
 
 What the software generates:
-[Output](https://i.imgur.com/dfkcxX1.png)
+![Output](https://i.imgur.com/dfkcxX1.png)
 
 ## Demonstration
 A link to a video demonstration can be found below:
+
 [Youtube](https://youtu.be/G6Rg8__YfW4)
