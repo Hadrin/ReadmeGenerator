@@ -87,12 +87,26 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    let licenseShield = "";
     inquirer.prompt(questions).then((answers) => {
+        switch(answers.license){
+            case "MIT":
+                licenseShield = "[MIT License Shield](https://img.shields.io/badge/license-MIT-green)";
+                break;
+            case "GPL":
+                licenseShield = "[GPL License Shield](https://img.shields.io/badge/license-GPL-blue)";
+                break;
+            case "BSD":
+                licenseShield = "[BSD License Shield](https://img.shields.io/badge/license-BSD-yellow)";
+                break;
+            default:
+                throw new Error("No License selected, this should not be possible.")
+        }
         let output = `# ${answers.project}
+${licenseShield}
 
-=================
 Table Of Contents
-=================
+
 [Description](#Description)
 [Installation](#Installation)
 [Usage](#Usage)
@@ -101,7 +115,7 @@ Table Of Contents
 [Tests](#Tests)
 [Questions](#Questions)
 [License](#License)
-~~~~~~~~~~~~~~~~~
+
 
 ## Description
 Created by: [${answers.author}](https://github.com/${answers.gitname})
