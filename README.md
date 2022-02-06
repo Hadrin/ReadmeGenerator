@@ -1,8 +1,7 @@
 # Readme Generator
 
-=================
-Table Of Contents
-=================
+
+|Table Of Contents|
 [Description](#Description)
 [Installation](#Installation)
 [Usage](#Usage)
@@ -11,7 +10,6 @@ Table Of Contents
 [Tests](#Tests)
 [Questions](#Questions)
 [License](#License)
-~~~~~~~~~~~~~~~~~
 
 ## Description
 Created by: [David McGinley](https://github.com/undefined)
