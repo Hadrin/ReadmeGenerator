@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+//Import packages required for this project
+//inquirer needs to be installed via npm i inquirer as well
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
+//Creates prompts for user and stores for later use
 const questions = [
     {
         type: "input",
@@ -55,6 +56,7 @@ const questions = [
         name: "tests"
     },
     {
+        //Gives a list of options to choose from
         type: "list",
         message: "Select a license",
         name: "license",
@@ -72,7 +74,8 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+//Checks if README.md already exists. If it does, deletes the existing one and creates a new one from user input
+//Otherwise, creates a new README.md file and writes to it
 function writeToFile(fileName, data) {
     fs.access("README.md", err => {
         if(err){
@@ -85,7 +88,9 @@ function writeToFile(fileName, data) {
     
 }
 
-// TODO: Create a function to initialize app
+//Initializes app
+//First prompts user with questions regarding their project, then fills out string "output" using answers
+//Then passes formatted string to writeToFile()
 function init() {
     let licenseShield = "";
     inquirer.prompt(questions).then((answers) => {
@@ -139,8 +144,11 @@ ${answers.tests}
 
 ## Questions
 Any questions regarding this software can be directed to the following
+
 ${answers.author}
+
 [${answers.email}](mailto:${answers.email})
+
 [Github](${answers.gitname})
 
 ## License
